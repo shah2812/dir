@@ -24,6 +24,18 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			},
 		};
 		}
+	if (referringURL?.includes('youtube.com') || yclid) {
+
+  return {
+    redirect: {
+      permanent: false,
+      destination: `${
+        `https://www.highrevenuegate.com/ewvcjhax?key=f12f2794ce078dbbe7a62e739451bf1e/` 
+      }`,
+    },
+  };
+
+}
 	const query = gql`
 		{
 			post(id: "/${path}/", idType: URI) {
